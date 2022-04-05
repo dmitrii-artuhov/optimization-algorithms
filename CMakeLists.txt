@@ -9,18 +9,24 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # Ternary Search
 add_executable(
-	ternary_search
+	1_ternary_search
 	./1-ternary-search/main.cpp
 )
 
 # Golden Section Search
 add_executable(
-	golden_section_search
+	2_golden_section_search
 	./2-golden-section-search/main.cpp
 )
 
 # Fibonacci Method
 add_executable(
-	fibonacci_method
+	3_fibonacci_method
 	./3-fibonacci-method/main.cpp
+)
+
+# Newton Method
+add_executable(
+	4_newton_method
+	./4-newton-method/main.cpp
 )
