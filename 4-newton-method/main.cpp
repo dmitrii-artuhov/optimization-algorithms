@@ -12,9 +12,9 @@ double NewtonMethod(double l, double r, Func& F, Dir& D, double EPS) {
 	double x_km = l; // x_{k - 1}
 	double x_k = r; // x_{k}
 
-	auto bound = [](double& x, double& l, double& r, double bl, double br) {
-		while (!(x >= bl && x <= br)) {
-			x = (l + r) / 2;
+	auto bound = [&](double& x, double& bl, double& br) {
+		while (!(x >= l && x <= r)) {
+			x = (bl + br) / 2;
 		}
 	};
 
@@ -38,8 +38,8 @@ double NewtonMethod(double l, double r, Func& F, Dir& D, double EPS) {
 
 		// bound Newton method to the [l, r] segment
 		// bound the points
-		if (!in_bounds(x_km)) bound(x_km, x_km, x_k, l, r);
-		if (!in_bounds(x_k)) bound(x_k, x_km, x_k, l, r);
+		if (!in_bounds(x_km)) bound(x_km, x_km, x_k);
+		if (!in_bounds(x_k)) bound(x_k, x_km, x_k);
 	}
 	while (std::abs(x_k - x_km) > EPS);
 
