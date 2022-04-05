@@ -1,6 +1,7 @@
 # Golden Section Search
 
-Very basic algorithm. We have an [unimodal function](https://en.wikipedia.org/wiki/Unimodality), and we want to find it's minimum (by definition of unimodality it will be the only local minimum).
+We have an [unimodal function](https://en.wikipedia.org/wiki/Unimodality), and we want to find it's minimum (by definition of unimodality it will be the only local minimum).
+This algorithm is better that regular Ternary Search because it only calculates single value of function on each iteration. All the maths behind that you can read in the article below (see link).
 
 In my code example the algorithm finds minimum of `sin(x) - 10 / x`, on segment `[8, 12]` which will print:
 
