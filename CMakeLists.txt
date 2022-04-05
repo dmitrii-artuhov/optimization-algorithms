@@ -18,3 +18,9 @@ add_executable(
 	golden_section_search
 	./2-golden-section-search/main.cpp
 )
+
+# Fibonacci Method
+add_executable(
+	fibonacci_method
+	./3-fibonacci-method/main.cpp
+)
